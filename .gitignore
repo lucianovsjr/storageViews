@@ -1,0 +1,9 @@
+Includes/
+Lib/
+Scripts/
+share/
+
+.env
+database.db
+app.log
+pip-selfcheck.json
