@@ -108,7 +108,7 @@ for view in views:
     time_start = time.time()
     try:
         mssql_cursor.execute(f'DELETE FROM {view}')
-        mssql_cursor.execute(f'SELECT TOP 10 * FROM {view}')
+        mssql_cursor.execute(f'SELECT * FROM {view}')
     except Exception as e:
         logging.info('{} Erro {}'.format(view, e))
 
