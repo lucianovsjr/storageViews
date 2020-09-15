@@ -2,6 +2,7 @@ Includes/
 Lib/
 Scripts/
 share/
+.vscode/
 
 .env
 database.db
