@@ -1,2 +1,2 @@
 #!/bin/sh
-../../.venv/bin/python ../app.py
+../.venv/bin/python ../app.py
