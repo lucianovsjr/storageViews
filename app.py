@@ -107,7 +107,7 @@ for view in views:
 
     time_start = time.time()
     try:
-        mssql_cursor.execute(f'DELETE FROM {view}')
+        mongo_db[view].remove({})
         mssql_cursor.execute(f'SELECT * FROM {view}')
     except Exception as e:
         logging.info('{} Erro {}'.format(view, e))
