@@ -44,7 +44,7 @@ for row in mssql_cursor:
         sqlite_cursor.execute(f'INSERT INTO views VALUES ("{view_name}", 1)')
         logging.info(f'New View {view_name}')
 
-    if view_name in DISCARD_VIEWS and sqlite_row[1] == 1:
+    if view_name in DISCARD_VIEWS:
         sqlite_cursor.execute(f'UPDATE views SET enabled = 0 WHERE name = "{view_name}"')
         logging.info(f'Discard View {view_name}')
 
