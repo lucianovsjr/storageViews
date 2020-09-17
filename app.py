@@ -46,7 +46,8 @@ for row in mssql_cursor:
 
     if view_name in DISCARD_VIEWS:
         sqlite_cursor.execute(f'UPDATE views SET enabled = 0 WHERE name = "{view_name}"')
-        logging.info(f'Discard View {view_name}')
+        if not sqlite_row:
+            logging.info(f'Discard View {view_name}')
 
 views = []
 sqlite_cursor.execute('SELECT name FROM views WHERE enabled = 1')
